@@ -106,7 +106,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="cancelButton:" destination="86T-Mu-X0a" eventType="touchUpInside" id="Asx-3h-fL6"/>
                                     <action selector="retakeButton:" destination="86T-Mu-X0a" eventType="touchUpInside" id="sv0-zR-JM6"/>
                                 </connections>
                             </button>

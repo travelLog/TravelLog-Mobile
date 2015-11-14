@@ -16,11 +16,7 @@ class imagePreViewController: UIViewController {
         
     }
     
-    @IBAction func cancelButton(sender: Buttons) {
-
-    }
-    
-    
+      
     @IBAction func okButton(sender: Buttons) {
     }
     
