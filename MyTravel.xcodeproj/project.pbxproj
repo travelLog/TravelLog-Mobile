@@ -19,6 +19,7 @@
 		37FE912C1BF797B8007273E6 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE912B1BF797B8007273E6 /* LogsViewController.swift */; };
 		37FE91521BF7A9B3007273E6 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE91511BF7A9B3007273E6 /* CaptureViewController.swift */; };
 		37FE91541BF7BF15007273E6 /* ImageEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE91531BF7BF15007273E6 /* ImageEditing.swift */; };
+		440839CF1BF7D8F5005938F0 /* logAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440839CE1BF7D8F5005938F0 /* logAddViewController.swift */; };
 		449DEBB31BF797C300730B26 /* imagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DEBB21BF797C300730B26 /* imagePicker.swift */; };
 		449DEBB51BF797E100730B26 /* imagePreviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DEBB41BF797E100730B26 /* imagePreviewer.swift */; };
 		449DEBB71BF7985100730B26 /* postViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DEBB61BF7985100730B26 /* postViewController.swift */; };
@@ -44,6 +45,7 @@
 		37FE912B1BF797B8007273E6 /* LogsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
 		37FE91511BF7A9B3007273E6 /* CaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 		37FE91531BF7BF15007273E6 /* ImageEditing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageEditing.swift; sourceTree = "<group>"; };
+		440839CE1BF7D8F5005938F0 /* logAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = logAddViewController.swift; sourceTree = "<group>"; };
 		449DEBB21BF797C300730B26 /* imagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imagePicker.swift; sourceTree = "<group>"; };
 		449DEBB41BF797E100730B26 /* imagePreviewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = imagePreviewer.swift; path = ../imagePreviewer.swift; sourceTree = "<group>"; };
 		449DEBB61BF7985100730B26 /* postViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				449DEBB61BF7985100730B26 /* postViewController.swift */,
 				449DEBBB1BF799FE00730B26 /* postImageView.swift */,
 				449DEBC41BF7A59E00730B26 /* logSelector.swift */,
+				440839CE1BF7D8F5005938F0 /* logAddViewController.swift */,
 			);
 			name = postImageView;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				449DEBBC1BF799FE00730B26 /* postImageView.swift in Sources */,
 				37FE910D1BF78A00007273E6 /* AppDelegate.swift in Sources */,
 				449DEBBA1BF798C700730B26 /* Buttons.swift in Sources */,
+				440839CF1BF7D8F5005938F0 /* logAddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
