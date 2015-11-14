@@ -24,6 +24,7 @@
 		449DEBBC1BF799FE00730B26 /* postImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DEBBB1BF799FE00730B26 /* postImageView.swift */; };
 		449DEBC11BF7A1E400730B26 /* imagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DEBC01BF7A1E400730B26 /* imagePickerViewController.swift */; };
 		449DEBC31BF7A20700730B26 /* imagePreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DEBC21BF7A20700730B26 /* imagePreViewController.swift */; };
+		449DEBC51BF7A59E00730B26 /* logSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DEBC41BF7A59E00730B26 /* logSelector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		449DEBBB1BF799FE00730B26 /* postImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postImageView.swift; sourceTree = "<group>"; };
 		449DEBC01BF7A1E400730B26 /* imagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imagePickerViewController.swift; sourceTree = "<group>"; };
 		449DEBC21BF7A20700730B26 /* imagePreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imagePreViewController.swift; sourceTree = "<group>"; };
+		449DEBC41BF7A59E00730B26 /* logSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = logSelector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				449DEBB61BF7985100730B26 /* postViewController.swift */,
 				449DEBBB1BF799FE00730B26 /* postImageView.swift */,
+				449DEBC41BF7A59E00730B26 /* logSelector.swift */,
 			);
 			name = postImageView;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37FE912C1BF797B8007273E6 /* LogsViewController.swift in Sources */,
+				449DEBC51BF7A59E00730B26 /* logSelector.swift in Sources */,
 				37FE91211BF78A8B007273E6 /* LoginViewController.swift in Sources */,
 				449DEBB51BF797E100730B26 /* imagePreviewer.swift in Sources */,
 				449DEBC11BF7A1E400730B26 /* imagePickerViewController.swift in Sources */,

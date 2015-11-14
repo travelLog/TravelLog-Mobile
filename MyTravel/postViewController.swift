@@ -11,6 +11,30 @@ import UIKit
 class postViewController: UIViewController {
 
     
+    @IBOutlet weak var logPicker: UIPickerView!
+    
+    
+    @IBOutlet weak var imageToPost: postImageView!
+    
+  
+    @IBOutlet weak var locationTF: UITextField!
+    
+    
+    @IBOutlet weak var captionTF: UITextField!
+    
+    
+    
+    
+    @IBAction func addLogButton(sender: Buttons) {
+    }
+    
+    @IBAction func retakeButton(sender: Buttons) {
+    }
+    
+    
+    @IBAction func postButton(sender: Buttons) {
+    }
+    
     
     
     

@@ -21,6 +21,24 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <animations/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOI-do-I2h" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
+                                <rect key="frame" x="157" y="599" width="60" height="60"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.034578598420000002" blue="0.14930722769999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -126,37 +144,34 @@
                         <viewControllerLayoutGuide type="bottom" id="rWR-J6-z3M"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="00I-ug-Wad">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UtG-v7-tPH">
-                                <rect key="frame" x="0.0" y="510" width="375" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location Where You Are" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UtG-v7-tPH">
+                                <rect key="frame" x="0.0" y="510" width="414" height="30"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="uGP-5l-Pbo"/>
+                                    <constraint firstAttribute="height" constant="30" id="cq4-s1-85u"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMm-JW-7ED">
-                                <rect key="frame" x="0.0" y="550" width="375" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Caption Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMm-JW-7ED">
+                                <rect key="frame" x="0.0" y="550" width="414" height="30"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="eXX-Ux-Fzr"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liV-5O-f2N" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="20" y="617" width="140" height="40"/>
+                                <rect key="frame" x="20" y="686" width="140" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.034578598420000002" blue="0.14930722769999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="DtF-jP-OUn"/>
-                                    <constraint firstAttribute="width" constant="140" id="u5T-AU-KD4"/>
+                                    <constraint firstAttribute="width" constant="140" id="Obe-pR-wvf"/>
+                                    <constraint firstAttribute="height" constant="40" id="Y6x-Lc-eVj"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Retake Pic">
@@ -171,14 +186,17 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="retakeButton:" destination="14v-dh-6Ex" eventType="touchUpInside" id="cmf-ro-Lq5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STX-tq-r3C" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="215" y="617" width="140" height="40"/>
+                                <rect key="frame" x="254" y="686" width="140" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="gYG-Fa-oFs"/>
-                                    <constraint firstAttribute="height" constant="40" id="mLD-aR-yu7"/>
+                                    <constraint firstAttribute="height" constant="40" id="Jx9-IX-Vvu"/>
+                                    <constraint firstAttribute="width" constant="140" id="qfB-dt-W8L"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Post">
@@ -193,48 +211,83 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="postButton:" destination="14v-dh-6Ex" eventType="touchUpInside" id="TOw-cE-2kT"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-rf-qIc" customClass="postImageView" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="40" width="375" height="460"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-rf-qIc" customClass="postImageView" customModule="MyTravel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="40" width="414" height="460"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="460" id="7v8-mc-up5"/>
-                                </constraints>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmu-O8-DY1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="364" height="40"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Hsw-Q7-7fg"/>
+                                    <constraint firstAttribute="height" constant="40" id="wc3-Bf-tee"/>
                                 </constraints>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3p-QO-bez" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
+                                <rect key="frame" x="364" y="0.0" width="50" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="56I-Gn-MUZ"/>
+                                    <constraint firstAttribute="height" constant="40" id="F44-v6-ZJd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.034578598420000002" blue="0.14930722769999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addLogButton:" destination="14v-dh-6Ex" eventType="touchUpInside" id="mgX-57-P20"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wMm-JW-7ED" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="5XU-fD-87A"/>
-                            <constraint firstAttribute="trailing" secondItem="wMm-JW-7ED" secondAttribute="trailing" id="6I0-zw-0gX"/>
-                            <constraint firstItem="p4g-rf-qIc" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="CJt-YF-PvV"/>
-                            <constraint firstItem="rWR-J6-z3M" firstAttribute="top" secondItem="STX-tq-r3C" secondAttribute="bottom" constant="10" id="DNu-u3-9Op"/>
-                            <constraint firstAttribute="trailing" secondItem="STX-tq-r3C" secondAttribute="trailing" constant="20" id="LZz-fP-veu"/>
-                            <constraint firstAttribute="trailing" secondItem="UtG-v7-tPH" secondAttribute="trailing" id="aXO-ZA-dyN"/>
-                            <constraint firstItem="liV-5O-f2N" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" constant="20" id="bBC-gZ-K4F"/>
-                            <constraint firstItem="wMm-JW-7ED" firstAttribute="top" secondItem="UtG-v7-tPH" secondAttribute="bottom" constant="10" id="djw-EB-rmY"/>
-                            <constraint firstItem="tmu-O8-DY1" firstAttribute="top" secondItem="00I-ug-Wad" secondAttribute="top" id="kcv-y9-2TU"/>
-                            <constraint firstItem="p4g-rf-qIc" firstAttribute="top" secondItem="tmu-O8-DY1" secondAttribute="bottom" id="mjd-Ye-wcS"/>
-                            <constraint firstItem="UtG-v7-tPH" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="pcp-lo-vL1"/>
-                            <constraint firstItem="UtG-v7-tPH" firstAttribute="top" secondItem="p4g-rf-qIc" secondAttribute="bottom" constant="10" id="qhB-no-u5F"/>
-                            <constraint firstAttribute="trailing" secondItem="p4g-rf-qIc" secondAttribute="trailing" id="sG9-Mn-QQp"/>
-                            <constraint firstItem="tmu-O8-DY1" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="t0v-qS-o2m"/>
-                            <constraint firstItem="rWR-J6-z3M" firstAttribute="top" secondItem="liV-5O-f2N" secondAttribute="bottom" constant="10" id="vQU-qk-4Zt"/>
-                            <constraint firstAttribute="trailing" secondItem="tmu-O8-DY1" secondAttribute="trailing" id="wM6-GC-EoE"/>
+                            <constraint firstAttribute="trailing" secondItem="w3p-QO-bez" secondAttribute="trailing" id="49O-xh-57J"/>
+                            <constraint firstItem="wMm-JW-7ED" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="52L-ij-YuH"/>
+                            <constraint firstItem="tmu-O8-DY1" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="7ZM-3f-Xup"/>
+                            <constraint firstItem="p4g-rf-qIc" firstAttribute="top" secondItem="w3p-QO-bez" secondAttribute="bottom" id="F2y-29-4b0"/>
+                            <constraint firstItem="tmu-O8-DY1" firstAttribute="top" secondItem="00I-ug-Wad" secondAttribute="top" id="LfV-2T-KC5"/>
+                            <constraint firstItem="UtG-v7-tPH" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="O6U-y5-tJ8"/>
+                            <constraint firstAttribute="trailing" secondItem="UtG-v7-tPH" secondAttribute="trailing" id="OSh-iv-WDp"/>
+                            <constraint firstItem="UtG-v7-tPH" firstAttribute="top" secondItem="p4g-rf-qIc" secondAttribute="bottom" constant="10" id="Qxw-l9-JxL"/>
+                            <constraint firstItem="rWR-J6-z3M" firstAttribute="top" secondItem="liV-5O-f2N" secondAttribute="bottom" constant="10" id="YPo-iO-jZy"/>
+                            <constraint firstItem="w3p-QO-bez" firstAttribute="leading" secondItem="tmu-O8-DY1" secondAttribute="trailing" id="dni-vH-WvT"/>
+                            <constraint firstAttribute="trailing" secondItem="p4g-rf-qIc" secondAttribute="trailing" id="esI-m4-gFC"/>
+                            <constraint firstItem="p4g-rf-qIc" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="fuz-LV-Xih"/>
+                            <constraint firstAttribute="trailing" secondItem="wMm-JW-7ED" secondAttribute="trailing" id="hsE-Qx-6tu"/>
+                            <constraint firstItem="w3p-QO-bez" firstAttribute="leading" secondItem="tmu-O8-DY1" secondAttribute="trailing" id="i8q-tj-T0c"/>
+                            <constraint firstItem="liV-5O-f2N" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" constant="20" id="ohT-Yp-o3i"/>
+                            <constraint firstItem="w3p-QO-bez" firstAttribute="top" secondItem="00I-ug-Wad" secondAttribute="top" id="r6Q-VX-dQ8"/>
+                            <constraint firstItem="rWR-J6-z3M" firstAttribute="top" secondItem="STX-tq-r3C" secondAttribute="bottom" constant="10" id="rbM-Ax-CBY"/>
+                            <constraint firstAttribute="trailing" secondItem="STX-tq-r3C" secondAttribute="trailing" constant="20" id="rzQ-mH-pWf"/>
+                            <constraint firstItem="wMm-JW-7ED" firstAttribute="top" secondItem="UtG-v7-tPH" secondAttribute="bottom" constant="10" id="s96-RN-ypA"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="captionTF" destination="wMm-JW-7ED" id="Ov2-LF-6qN"/>
+                        <outlet property="imageToPost" destination="p4g-rf-qIc" id="x7I-93-dfz"/>
+                        <outlet property="locationTF" destination="UtG-v7-tPH" id="d0b-h9-g2O"/>
+                        <outlet property="logPicker" destination="tmu-O8-DY1" id="c5A-N9-oAs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3R-6S-77v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692.5" y="1049.5"/>
+            <point key="canvasLocation" x="1701" y="1050"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aUT-F1-mBT">
