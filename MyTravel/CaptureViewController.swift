@@ -75,7 +75,7 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        <#code#>
+        
     }
     
 }

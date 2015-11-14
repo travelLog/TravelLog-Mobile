@@ -40,11 +40,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-<<<<<<< HEAD
                                     <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nh2-lN-cmZ"/>
-=======
-                                    <segue destination="86T-Mu-X0a" kind="show" id="imQ-GE-UnP"/>
->>>>>>> origin/master
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E4g-B7-NPh" customClass="imagePicker" customModule="MyTravel" customModuleProvider="target">
@@ -84,13 +80,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-<<<<<<< HEAD
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JtW-pH-K3V" customClass="imagePreView" customModule="MyTravel" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jt2-pH-K3V" customClass="imagePreView" customModule="MyTravel" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
                             </imageView>
-=======
->>>>>>> origin/master
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsr-aL-aAW" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
                                 <rect key="frame" x="20" y="567" width="80" height="80"/>
                                 <animations/>
@@ -113,12 +106,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-<<<<<<< HEAD
-                                    <action selector="retakeButton:" destination="86T-Mu-X0a" eventType="touchUpInside" id="sv0-zR-JM6"/>
-=======
                                     <action selector="cancelButton:" destination="86T-Mu-X0a" eventType="touchUpInside" id="Asx-3h-fL6"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="zt0-sP-Yxc"/>
->>>>>>> origin/master
+                                    <action selector="retakeButton:" destination="86T-Mu-X0a" eventType="touchUpInside" id="sv0-zR-JM6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1c5-Cc-1QC" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
@@ -354,7 +343,4 @@
             <point key="canvasLocation" x="424" y="1036"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="zt0-sP-Yxc"/>
-    </inferredMetricsTieBreakers>
 </document>

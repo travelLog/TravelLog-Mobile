@@ -9,14 +9,15 @@
 import UIKit
 
 class imagePreViewController: UIViewController {
-
-<<<<<<< HEAD
-    @IBAction func retakeButton(sender: Buttons) {
-=======
+    
     var originalImage: UIImage?
     
+    @IBAction func retakeButton(sender: Buttons) {
+        
+    }
+    
     @IBAction func cancelButton(sender: Buttons) {
->>>>>>> origin/master
+
     }
     
     
