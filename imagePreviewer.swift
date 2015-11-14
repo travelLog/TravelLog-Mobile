@@ -8,7 +8,7 @@
 
 import UIKit
 
-class imagePreviewer: UIImageView {
+class imagePreView: UIImageView {
 
     /*
     // Only override drawRect: if you perform custom drawing.
