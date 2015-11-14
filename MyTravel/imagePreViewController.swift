@@ -12,11 +12,14 @@ class imagePreViewController: UIViewController {
     
     var originalImage: UIImage?
     
+    @IBOutlet weak var previewImageView: UIImageView!
+    
+    
     @IBAction func retakeButton(sender: Buttons) {
         
     }
     
-      
+    
     @IBAction func okButton(sender: Buttons) {
     }
     
@@ -34,14 +37,5 @@ class imagePreViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }

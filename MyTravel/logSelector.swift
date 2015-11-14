@@ -10,6 +10,6 @@ import UIKit
 
 class logSelector: UIPickerView {
 
-    
+    var logs: [[String:AnyObject]] = []
     
    }
