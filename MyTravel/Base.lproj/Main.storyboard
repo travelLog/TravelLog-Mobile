@@ -3,13 +3,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Capture View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="imagePicker" id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="imagePicker" id="BYZ-38-t0r" customClass="CaptureViewController" customModule="MyTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -27,15 +26,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Zv-cx-7mi"/>
+                    <connections>
+                        <outlet property="cameraHolderView" destination="E4g-B7-NPh" id="ClL-f1-UvF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="860.5" y="1035.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Image Pre View Controller-->
         <scene sceneID="jGS-qK-h7D">
             <objects>
-                <viewController storyboardIdentifier="imagePreviewer" id="86T-Mu-X0a" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="imagePreviewer" id="86T-Mu-X0a" customClass="imagePreViewController" customModule="MyTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5WT-lx-uct"/>
                         <viewControllerLayoutGuide type="bottom" id="dlK-JX-LXI"/>
@@ -44,7 +46,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JtW-pH-K3V" customClass="imagePreviewer" customModule="MyTravel" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JtW-pH-K3V">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
                             </imageView>
@@ -69,6 +71,9 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelButton:" destination="86T-Mu-X0a" eventType="touchUpInside" id="Asx-3h-fL6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1c5-Cc-1QC" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
                                 <rect key="frame" x="275" y="567" width="80" height="80"/>
@@ -91,6 +96,9 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="okButton:" destination="86T-Mu-X0a" eventType="touchUpInside" id="Fas-fV-nKQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -112,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="1268.5" y="1035.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Post View Controller-->
         <scene sceneID="1yE-vS-yHK">
             <objects>
-                <viewController storyboardIdentifier="postVC" id="14v-dh-6Ex" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="postVC" id="14v-dh-6Ex" customClass="postViewController" customModule="MyTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cOe-Tc-uEe"/>
                         <viewControllerLayoutGuide type="bottom" id="rWR-J6-z3M"/>
@@ -124,37 +132,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACc-Kp-EXJ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UtG-v7-tPH">
+                                <rect key="frame" x="0.0" y="510" width="375" height="30"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="rQU-ii-o0R"/>
+                                    <constraint firstAttribute="height" constant="30" id="uGP-5l-Pbo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UtG-v7-tPH">
-                                <rect key="frame" x="0.0" y="522" width="375" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMm-JW-7ED">
-                                <rect key="frame" x="0.0" y="562" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="550" width="375" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eXX-Ux-Fzr"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liV-5O-f2N" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="16" y="617" width="150" height="40"/>
+                                <rect key="frame" x="20" y="617" width="140" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.034578598420000002" blue="0.14930722769999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="bcb-Rg-lMq"/>
-                                    <constraint firstAttribute="width" constant="150" id="r9E-rk-RQW"/>
+                                    <constraint firstAttribute="height" constant="40" id="DtF-jP-OUn"/>
+                                    <constraint firstAttribute="width" constant="140" id="u5T-AU-KD4"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Retake Pic">
@@ -171,12 +176,12 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STX-tq-r3C" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="209" y="617" width="150" height="40"/>
+                                <rect key="frame" x="215" y="617" width="140" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="9KX-af-IIZ"/>
-                                    <constraint firstAttribute="width" constant="150" id="euV-6t-Iuf"/>
+                                    <constraint firstAttribute="width" constant="140" id="gYG-Fa-oFs"/>
+                                    <constraint firstAttribute="height" constant="40" id="mLD-aR-yu7"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Post">
@@ -193,39 +198,46 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-rf-qIc" customClass="postImageView" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="375" height="462"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="460"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="462" id="KHo-D8-xI5"/>
+                                    <constraint firstAttribute="height" constant="460" id="7v8-mc-up5"/>
                                 </constraints>
                             </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmu-O8-DY1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Hsw-Q7-7fg"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rWR-J6-z3M" firstAttribute="top" secondItem="STX-tq-r3C" secondAttribute="bottom" constant="10" id="1sx-Mf-sag"/>
-                            <constraint firstAttribute="trailing" secondItem="wMm-JW-7ED" secondAttribute="trailing" id="33z-Ig-jFk"/>
-                            <constraint firstItem="p4g-rf-qIc" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="5q5-b3-90a"/>
-                            <constraint firstItem="p4g-rf-qIc" firstAttribute="top" secondItem="ACc-Kp-EXJ" secondAttribute="bottom" id="6X5-aZ-bSg"/>
-                            <constraint firstAttribute="trailing" secondItem="UtG-v7-tPH" secondAttribute="trailing" id="ASg-Ef-chc"/>
-                            <constraint firstItem="ACc-Kp-EXJ" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="Cql-gd-Yw9"/>
-                            <constraint firstItem="STX-tq-r3C" firstAttribute="trailing" secondItem="00I-ug-Wad" secondAttribute="trailingMargin" id="Dbp-Er-NdN"/>
-                            <constraint firstAttribute="trailing" secondItem="ACc-Kp-EXJ" secondAttribute="trailing" id="FQE-IQ-Nh0"/>
-                            <constraint firstItem="wMm-JW-7ED" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="Hrj-IQ-C2j"/>
-                            <constraint firstItem="UtG-v7-tPH" firstAttribute="top" secondItem="p4g-rf-qIc" secondAttribute="bottom" constant="10" id="bGa-EI-BUV"/>
-                            <constraint firstItem="liV-5O-f2N" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leadingMargin" id="e1n-ev-Ija"/>
-                            <constraint firstItem="ACc-Kp-EXJ" firstAttribute="top" secondItem="cOe-Tc-uEe" secondAttribute="bottom" id="hEU-J5-726"/>
-                            <constraint firstItem="rWR-J6-z3M" firstAttribute="top" secondItem="liV-5O-f2N" secondAttribute="bottom" constant="10" id="ipj-jq-IgK"/>
-                            <constraint firstItem="UtG-v7-tPH" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="kDL-5F-Vl3"/>
-                            <constraint firstItem="wMm-JW-7ED" firstAttribute="top" secondItem="UtG-v7-tPH" secondAttribute="bottom" constant="10" id="tQp-Ou-2gs"/>
-                            <constraint firstAttribute="trailing" secondItem="p4g-rf-qIc" secondAttribute="trailing" id="wRE-YE-0sT"/>
+                            <constraint firstItem="wMm-JW-7ED" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="5XU-fD-87A"/>
+                            <constraint firstAttribute="trailing" secondItem="wMm-JW-7ED" secondAttribute="trailing" id="6I0-zw-0gX"/>
+                            <constraint firstItem="p4g-rf-qIc" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="CJt-YF-PvV"/>
+                            <constraint firstItem="rWR-J6-z3M" firstAttribute="top" secondItem="STX-tq-r3C" secondAttribute="bottom" constant="10" id="DNu-u3-9Op"/>
+                            <constraint firstAttribute="trailing" secondItem="STX-tq-r3C" secondAttribute="trailing" constant="20" id="LZz-fP-veu"/>
+                            <constraint firstAttribute="trailing" secondItem="UtG-v7-tPH" secondAttribute="trailing" id="aXO-ZA-dyN"/>
+                            <constraint firstItem="liV-5O-f2N" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" constant="20" id="bBC-gZ-K4F"/>
+                            <constraint firstItem="wMm-JW-7ED" firstAttribute="top" secondItem="UtG-v7-tPH" secondAttribute="bottom" constant="10" id="djw-EB-rmY"/>
+                            <constraint firstItem="tmu-O8-DY1" firstAttribute="top" secondItem="00I-ug-Wad" secondAttribute="top" id="kcv-y9-2TU"/>
+                            <constraint firstItem="p4g-rf-qIc" firstAttribute="top" secondItem="tmu-O8-DY1" secondAttribute="bottom" id="mjd-Ye-wcS"/>
+                            <constraint firstItem="UtG-v7-tPH" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="pcp-lo-vL1"/>
+                            <constraint firstItem="UtG-v7-tPH" firstAttribute="top" secondItem="p4g-rf-qIc" secondAttribute="bottom" constant="10" id="qhB-no-u5F"/>
+                            <constraint firstAttribute="trailing" secondItem="p4g-rf-qIc" secondAttribute="trailing" id="sG9-Mn-QQp"/>
+                            <constraint firstItem="tmu-O8-DY1" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="t0v-qS-o2m"/>
+                            <constraint firstItem="rWR-J6-z3M" firstAttribute="top" secondItem="liV-5O-f2N" secondAttribute="bottom" constant="10" id="vQU-qk-4Zt"/>
+                            <constraint firstAttribute="trailing" secondItem="tmu-O8-DY1" secondAttribute="trailing" id="wM6-GC-EoE"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3R-6S-77v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1693.5" y="1035.5"/>
+            <point key="canvasLocation" x="1692.5" y="1049.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aUT-F1-mBT">
