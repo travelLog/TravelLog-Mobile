@@ -73,12 +73,19 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+//    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        
+//        if segue.identifier == "imagePost" {
+//            if let imagePreViewVC = segue.destinationViewController
+//            
+//        }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         
     }
     
-}
+//}
 
 
 
