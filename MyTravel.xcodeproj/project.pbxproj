@@ -17,6 +17,7 @@
 		37FE91241BF78ADF007273E6 /* RailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE91231BF78ADF007273E6 /* RailsRequest.swift */; };
 		37FE912A1BF797AF007273E6 /* Logs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FE91291BF797AF007273E6 /* Logs.storyboard */; };
 		37FE912C1BF797B8007273E6 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE912B1BF797B8007273E6 /* LogsViewController.swift */; };
+		37FE91521BF7A9B3007273E6 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE91511BF7A9B3007273E6 /* CaptureViewController.swift */; };
 		449DEBB31BF797C300730B26 /* imagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DEBB21BF797C300730B26 /* imagePicker.swift */; };
 		449DEBB51BF797E100730B26 /* imagePreviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DEBB41BF797E100730B26 /* imagePreviewer.swift */; };
 		449DEBB71BF7985100730B26 /* postViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DEBB61BF7985100730B26 /* postViewController.swift */; };
@@ -40,6 +41,7 @@
 		37FE91231BF78ADF007273E6 /* RailsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailsRequest.swift; sourceTree = "<group>"; };
 		37FE91291BF797AF007273E6 /* Logs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Logs.storyboard; sourceTree = "<group>"; };
 		37FE912B1BF797B8007273E6 /* LogsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
+		37FE91511BF7A9B3007273E6 /* CaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 		449DEBB21BF797C300730B26 /* imagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imagePicker.swift; sourceTree = "<group>"; };
 		449DEBB41BF797E100730B26 /* imagePreviewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = imagePreviewer.swift; path = ../imagePreviewer.swift; sourceTree = "<group>"; };
 		449DEBB61BF7985100730B26 /* postViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				37FE91291BF797AF007273E6 /* Logs.storyboard */,
 				37FE912B1BF797B8007273E6 /* LogsViewController.swift */,
 				37FE910E1BF78A00007273E6 /* ViewController.swift */,
+				37FE91511BF7A9B3007273E6 /* CaptureViewController.swift */,
 				449DEBB81BF7988F00730B26 /* process Flow */,
 				37FE911E1BF78A8B007273E6 /* Login.storyboard */,
 				37FE911F1BF78A8B007273E6 /* LoginViewController.swift */,
@@ -226,6 +229,7 @@
 				449DEBB31BF797C300730B26 /* imagePicker.swift in Sources */,
 				449DEBB71BF7985100730B26 /* postViewController.swift in Sources */,
 				37FE910F1BF78A00007273E6 /* ViewController.swift in Sources */,
+				37FE91521BF7A9B3007273E6 /* CaptureViewController.swift in Sources */,
 				449DEBC31BF7A20700730B26 /* imagePreViewController.swift in Sources */,
 				449DEBBC1BF799FE00730B26 /* postImageView.swift in Sources */,
 				37FE910D1BF78A00007273E6 /* AppDelegate.swift in Sources */,
