@@ -58,23 +58,33 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
         
     }
     
-//    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-//        
-//        let image = editingInfo?[UIImagePickerControllerOriginalImage] as? UIImage
-//        
-//        let filterVC = self.storyboard?.instantiateViewControllerWithIdentifier("filterVC") as? FilterViewController
-//        
-//        filterVC?.originalImage = flipImage(image!)
-//        
-//        self.navigationController?.pushViewController(filterVC!, animated: true)
-//        
-//    }
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
+        let image = editingInfo?[UIImagePickerControllerOriginalImage] as? UIImage
+        
+        let imageVC = self.storyboard?.instantiateViewControllerWithIdentifier("imagePreView") as? imagePreViewController
+        
+        imageVC?.originalImage = flipImage(image!)
+        
+        self.navigationController?.pushViewController(imageVC!, animated: true)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        <#code#>
+    }
     
 }
+
+
+
+
+
+
+
+
+
