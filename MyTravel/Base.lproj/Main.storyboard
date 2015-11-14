@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Capture View Controller-->
@@ -17,14 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E4g-B7-NPh" customClass="imagePicker" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <animations/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOI-do-I2h" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="157" y="599" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOI-do-I2h" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
+                                <rect key="frame" x="157.5" y="599" width="60" height="60"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ZZD-CR-U6i"/>
+                                    <constraint firstAttribute="width" constant="60" id="hRy-gJ-iJh"/>
+                                </constraints>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="OK">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,10 +39,25 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nh2-lN-cmZ"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E4g-B7-NPh" customClass="imagePicker" customModule="MyTravel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EOI-do-I2h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1ca-eL-vVm"/>
+                            <constraint firstAttribute="trailing" secondItem="E4g-B7-NPh" secondAttribute="trailing" id="MMg-Uq-phf"/>
+                            <constraint firstItem="E4g-B7-NPh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hkF-fA-LXu"/>
+                            <constraint firstAttribute="bottom" secondItem="E4g-B7-NPh" secondAttribute="bottom" id="qWo-HO-LvJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EOI-do-I2h" secondAttribute="bottom" constant="8" id="qw3-pf-R5c"/>
+                            <constraint firstItem="E4g-B7-NPh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sjO-lO-RRD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Zv-cx-7mi"/>
                     <connections>
@@ -50,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860.5" y="1035.5"/>
+            <point key="canvasLocation" x="860" y="1035"/>
         </scene>
         <!--Image Pre View Controller-->
         <scene sceneID="jGS-qK-h7D">
@@ -64,7 +80,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JtW-pH-K3V">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JtW-pH-K3V" customClass="imagePreView" customModule="MyTravel" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
                             </imageView>
@@ -77,7 +93,7 @@
                                     <constraint firstAttribute="height" constant="80" id="wlX-qp-BZx"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Cancel">
+                                <state key="normal" title="Retake Pic">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -90,7 +106,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="cancelButton:" destination="86T-Mu-X0a" eventType="touchUpInside" id="Asx-3h-fL6"/>
+                                    <action selector="retakeButton:" destination="86T-Mu-X0a" eventType="touchUpInside" id="sv0-zR-JM6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1c5-Cc-1QC" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
@@ -136,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdG-Bc-3d2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1268.5" y="1035.5"/>
+            <point key="canvasLocation" x="1291.5" y="1035.5"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="1yE-vS-yHK">
@@ -147,26 +163,11 @@
                         <viewControllerLayoutGuide type="bottom" id="rWR-J6-z3M"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="00I-ug-Wad">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location Where You Are" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UtG-v7-tPH">
-                                <rect key="frame" x="0.0" y="510" width="414" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="cq4-s1-85u"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Caption Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMm-JW-7ED">
-                                <rect key="frame" x="0.0" y="550" width="414" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liV-5O-f2N" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="20" y="686" width="140" height="40"/>
+                                <rect key="frame" x="20" y="617" width="140" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.034578598420000002" blue="0.14930722769999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="">
@@ -177,7 +178,7 @@
                                     <constraint firstAttribute="height" constant="40" id="Y6x-Lc-eVj"/>
                                 </constraints>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Retake Pic">
+                                <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -190,11 +191,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="retakeButton:" destination="14v-dh-6Ex" eventType="touchUpInside" id="cmf-ro-Lq5"/>
+                                    <action selector="cancelButton:" destination="14v-dh-6Ex" eventType="touchUpInside" id="tba-hv-AYf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STX-tq-r3C" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="254" y="686" width="140" height="40"/>
+                                <rect key="frame" x="215" y="617" width="140" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -218,19 +219,15 @@
                                     <action selector="postButton:" destination="14v-dh-6Ex" eventType="touchUpInside" id="TOw-cE-2kT"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-rf-qIc" customClass="postImageView" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="40" width="414" height="460"/>
-                                <animations/>
-                            </imageView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmu-O8-DY1">
-                                <rect key="frame" x="0.0" y="0.0" width="364" height="40"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmu-O8-DY1" customClass="logSelector" customModule="MyTravel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="325" height="40"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="wc3-Bf-tee"/>
                                 </constraints>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3p-QO-bez" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="364" y="0.0" width="50" height="40"/>
+                                <rect key="frame" x="325" y="0.0" width="50" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -255,32 +252,60 @@
                                     <action selector="addLogButton:" destination="14v-dh-6Ex" eventType="touchUpInside" id="mgX-57-P20"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-rf-qIc" customClass="postImageView" customModule="MyTravel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="42" width="375" height="472"/>
+                                <animations/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location Where You Are" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UtG-v7-tPH">
+                                <rect key="frame" x="-4" y="528" width="383" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6N3-sn-LtC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Caption Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMm-JW-7ED">
+                                <rect key="frame" x="-4" y="568" width="383" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kp2-NB-e8H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="w3p-QO-bez" secondAttribute="trailing" id="49O-xh-57J"/>
-                            <constraint firstItem="wMm-JW-7ED" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="52L-ij-YuH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wMm-JW-7ED" secondAttribute="trailing" constant="-20" id="4Mr-pH-Tqf"/>
                             <constraint firstItem="tmu-O8-DY1" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="7ZM-3f-Xup"/>
-                            <constraint firstItem="p4g-rf-qIc" firstAttribute="top" secondItem="w3p-QO-bez" secondAttribute="bottom" id="F2y-29-4b0"/>
+                            <constraint firstAttribute="trailing" secondItem="p4g-rf-qIc" secondAttribute="trailing" id="Bna-28-LBs"/>
                             <constraint firstItem="tmu-O8-DY1" firstAttribute="top" secondItem="00I-ug-Wad" secondAttribute="top" id="LfV-2T-KC5"/>
-                            <constraint firstItem="UtG-v7-tPH" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="O6U-y5-tJ8"/>
-                            <constraint firstAttribute="trailing" secondItem="UtG-v7-tPH" secondAttribute="trailing" id="OSh-iv-WDp"/>
-                            <constraint firstItem="UtG-v7-tPH" firstAttribute="top" secondItem="p4g-rf-qIc" secondAttribute="bottom" constant="10" id="Qxw-l9-JxL"/>
+                            <constraint firstItem="p4g-rf-qIc" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="Mqu-oM-NCs"/>
+                            <constraint firstItem="UtG-v7-tPH" firstAttribute="top" secondItem="p4g-rf-qIc" secondAttribute="bottom" constant="14" id="V6W-u5-BzE"/>
                             <constraint firstItem="rWR-J6-z3M" firstAttribute="top" secondItem="liV-5O-f2N" secondAttribute="bottom" constant="10" id="YPo-iO-jZy"/>
+                            <constraint firstItem="p4g-rf-qIc" firstAttribute="top" secondItem="w3p-QO-bez" secondAttribute="bottom" constant="2" id="aSB-c0-Bm3"/>
                             <constraint firstItem="w3p-QO-bez" firstAttribute="leading" secondItem="tmu-O8-DY1" secondAttribute="trailing" id="dni-vH-WvT"/>
-                            <constraint firstAttribute="trailing" secondItem="p4g-rf-qIc" secondAttribute="trailing" id="esI-m4-gFC"/>
-                            <constraint firstItem="p4g-rf-qIc" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="fuz-LV-Xih"/>
-                            <constraint firstAttribute="trailing" secondItem="wMm-JW-7ED" secondAttribute="trailing" id="hsE-Qx-6tu"/>
+                            <constraint firstItem="UtG-v7-tPH" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leadingMargin" constant="-20" id="eFq-ZW-i4h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UtG-v7-tPH" secondAttribute="trailing" constant="-20" id="ejN-sv-ED5"/>
+                            <constraint firstItem="STX-tq-r3C" firstAttribute="top" secondItem="wMm-JW-7ED" secondAttribute="bottom" constant="19" id="gDq-NO-NQq"/>
                             <constraint firstItem="w3p-QO-bez" firstAttribute="leading" secondItem="tmu-O8-DY1" secondAttribute="trailing" id="i8q-tj-T0c"/>
                             <constraint firstItem="liV-5O-f2N" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" constant="20" id="ohT-Yp-o3i"/>
+                            <constraint firstItem="wMm-JW-7ED" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leadingMargin" constant="-20" id="qoV-5j-o7o"/>
+                            <constraint firstItem="wMm-JW-7ED" firstAttribute="top" secondItem="UtG-v7-tPH" secondAttribute="bottom" constant="10" id="qpF-vU-0AU"/>
                             <constraint firstItem="w3p-QO-bez" firstAttribute="top" secondItem="00I-ug-Wad" secondAttribute="top" id="r6Q-VX-dQ8"/>
                             <constraint firstItem="rWR-J6-z3M" firstAttribute="top" secondItem="STX-tq-r3C" secondAttribute="bottom" constant="10" id="rbM-Ax-CBY"/>
                             <constraint firstAttribute="trailing" secondItem="STX-tq-r3C" secondAttribute="trailing" constant="20" id="rzQ-mH-pWf"/>
-                            <constraint firstItem="wMm-JW-7ED" firstAttribute="top" secondItem="UtG-v7-tPH" secondAttribute="bottom" constant="10" id="s96-RN-ypA"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dni-vH-WvT"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="captionTF" destination="wMm-JW-7ED" id="Ov2-LF-6qN"/>
                         <outlet property="imageToPost" destination="p4g-rf-qIc" id="x7I-93-dfz"/>
@@ -290,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3R-6S-77v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1701" y="1050"/>
+            <point key="canvasLocation" x="1718.5" y="1034.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aUT-F1-mBT">

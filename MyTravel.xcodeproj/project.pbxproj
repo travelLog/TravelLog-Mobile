@@ -112,8 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				449DEBBD1BF79A1B00730B26 /* imagePicker */,
-				449DEBBF1BF79A8000730B26 /* postImageView */,
 				449DEBBE1BF79A5900730B26 /* imagePreviewer */,
+				449DEBBF1BF79A8000730B26 /* postImageView */,
 				449DEBB91BF798C700730B26 /* Buttons.swift */,
 			);
 			name = "process Flow";

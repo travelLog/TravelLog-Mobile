@@ -10,10 +10,6 @@ import UIKit
 
 class CaptureViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    //    @property (weak, nonatomic) IBOutlet UIView *cameraHolderView;
-    //
-    //    @property UIImagePickerController * picker;
-    
     @IBOutlet weak var cameraHolderView: UIView!
     
     var picker: UIImagePickerController = UIImagePickerController()
