@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -43,14 +44,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JtW-pH-K3V" customClass="imagePreviewer" customModule="MyTravel" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JtW-pH-K3V" customClass="imagePreviewer" customModule="MyTravel" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsr-aL-aAW" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsr-aL-aAW" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
                                 <rect key="frame" x="20" y="567" width="80" height="80"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.034578598420000002" blue="0.14930722769999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="tou-0w-6tM"/>
+                                    <constraint firstAttribute="height" constant="80" id="wlX-qp-BZx"/>
+                                </constraints>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -65,10 +70,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1c5-Cc-1QC" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1c5-Cc-1QC" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
                                 <rect key="frame" x="275" y="567" width="80" height="80"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Gsq-LN-dR5"/>
+                                    <constraint firstAttribute="height" constant="80" id="JVj-0r-UJe"/>
+                                </constraints>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="OK">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -86,6 +95,16 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1c5-Cc-1QC" secondAttribute="trailing" constant="20" id="6Yb-Xu-KWA"/>
+                            <constraint firstItem="Nsr-aL-aAW" firstAttribute="leading" secondItem="mWA-LU-7x3" secondAttribute="leading" constant="20" id="Hzm-qF-7gi"/>
+                            <constraint firstItem="JtW-pH-K3V" firstAttribute="leading" secondItem="mWA-LU-7x3" secondAttribute="leading" id="QA1-nH-Y0h"/>
+                            <constraint firstItem="dlK-JX-LXI" firstAttribute="top" secondItem="JtW-pH-K3V" secondAttribute="bottom" id="Y4R-Mj-Ba9"/>
+                            <constraint firstItem="dlK-JX-LXI" firstAttribute="top" secondItem="Nsr-aL-aAW" secondAttribute="bottom" constant="20" id="bL2-5H-up8"/>
+                            <constraint firstItem="dlK-JX-LXI" firstAttribute="top" secondItem="1c5-Cc-1QC" secondAttribute="bottom" constant="20" id="hij-JK-pwr"/>
+                            <constraint firstItem="JtW-pH-K3V" firstAttribute="top" secondItem="mWA-LU-7x3" secondAttribute="top" id="jN6-Jr-gEg"/>
+                            <constraint firstAttribute="trailing" secondItem="JtW-pH-K3V" secondAttribute="trailing" id="p4X-jF-dHT"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -105,53 +124,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-rf-qIc" customClass="postImageView" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="51" width="381" height="462"/>
-                                <animations/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACc-Kp-EXJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACc-Kp-EXJ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rQU-ii-o0R"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UtG-v7-tPH">
-                                <rect key="frame" x="0.0" y="521" width="375" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UtG-v7-tPH">
+                                <rect key="frame" x="0.0" y="522" width="375" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMm-JW-7ED">
-                                <rect key="frame" x="0.0" y="559" width="375" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMm-JW-7ED">
+                                <rect key="frame" x="0.0" y="562" width="375" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STX-tq-r3C" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="205" y="604.5" width="150" height="50"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Post">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="1" green="0.034578598420000002" blue="0.14930722769999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liV-5O-f2N" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="20" y="606" width="150" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liV-5O-f2N" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
+                                <rect key="frame" x="16" y="617" width="150" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.034578598420000002" blue="0.14930722769999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bcb-Rg-lMq"/>
+                                    <constraint firstAttribute="width" constant="150" id="r9E-rk-RQW"/>
+                                </constraints>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Retake Pic">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -166,9 +170,56 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STX-tq-r3C" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
+                                <rect key="frame" x="209" y="617" width="150" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9KX-af-IIZ"/>
+                                    <constraint firstAttribute="width" constant="150" id="euV-6t-Iuf"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.034578598420000002" blue="0.14930722769999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-rf-qIc" customClass="postImageView" customModule="MyTravel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="375" height="462"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="462" id="KHo-D8-xI5"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rWR-J6-z3M" firstAttribute="top" secondItem="STX-tq-r3C" secondAttribute="bottom" constant="10" id="1sx-Mf-sag"/>
+                            <constraint firstAttribute="trailing" secondItem="wMm-JW-7ED" secondAttribute="trailing" id="33z-Ig-jFk"/>
+                            <constraint firstItem="p4g-rf-qIc" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="5q5-b3-90a"/>
+                            <constraint firstItem="p4g-rf-qIc" firstAttribute="top" secondItem="ACc-Kp-EXJ" secondAttribute="bottom" id="6X5-aZ-bSg"/>
+                            <constraint firstAttribute="trailing" secondItem="UtG-v7-tPH" secondAttribute="trailing" id="ASg-Ef-chc"/>
+                            <constraint firstItem="ACc-Kp-EXJ" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="Cql-gd-Yw9"/>
+                            <constraint firstItem="STX-tq-r3C" firstAttribute="trailing" secondItem="00I-ug-Wad" secondAttribute="trailingMargin" id="Dbp-Er-NdN"/>
+                            <constraint firstAttribute="trailing" secondItem="ACc-Kp-EXJ" secondAttribute="trailing" id="FQE-IQ-Nh0"/>
+                            <constraint firstItem="wMm-JW-7ED" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="Hrj-IQ-C2j"/>
+                            <constraint firstItem="UtG-v7-tPH" firstAttribute="top" secondItem="p4g-rf-qIc" secondAttribute="bottom" constant="10" id="bGa-EI-BUV"/>
+                            <constraint firstItem="liV-5O-f2N" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leadingMargin" id="e1n-ev-Ija"/>
+                            <constraint firstItem="ACc-Kp-EXJ" firstAttribute="top" secondItem="cOe-Tc-uEe" secondAttribute="bottom" id="hEU-J5-726"/>
+                            <constraint firstItem="rWR-J6-z3M" firstAttribute="top" secondItem="liV-5O-f2N" secondAttribute="bottom" constant="10" id="ipj-jq-IgK"/>
+                            <constraint firstItem="UtG-v7-tPH" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="kDL-5F-Vl3"/>
+                            <constraint firstItem="wMm-JW-7ED" firstAttribute="top" secondItem="UtG-v7-tPH" secondAttribute="bottom" constant="10" id="tQp-Ou-2gs"/>
+                            <constraint firstAttribute="trailing" secondItem="p4g-rf-qIc" secondAttribute="trailing" id="wRE-YE-0sT"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
