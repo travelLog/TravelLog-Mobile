@@ -62,7 +62,7 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
         
         let image = editingInfo?[UIImagePickerControllerOriginalImage] as? UIImage
         
-        let imageVC = self.storyboard?.instantiateViewControllerWithIdentifier("imagePreView") as? imagePreViewController
+        let imageVC = self.storyboard?.instantiateViewControllerWithIdentifier("imagePreviewer") as? imagePreViewController
         
         imageVC?.originalImage = flipImage(image!)
         
