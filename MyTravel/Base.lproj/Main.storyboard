@@ -153,6 +153,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="previewImageView" destination="JtW-pH-K3V" id="eTv-NX-QCS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdG-Bc-3d2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -320,6 +323,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3R-6S-77v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1718.5" y="1034.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7N5-23-YoG">
+            <objects>
+                <viewController id="5NZ-sy-oHJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kBa-vH-21e"/>
+                        <viewControllerLayoutGuide type="bottom" id="sWv-FT-UqF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="caM-mx-55f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e2N-Zu-Lqf">
+                                <rect key="frame" x="20" y="69" width="335" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTC-5E-Oe0" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
+                                <rect key="frame" x="275" y="567" width="80" height="80"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Ky3-2V-QB7"/>
+                                    <constraint firstAttribute="height" constant="80" id="v4e-xT-eZb"/>
+                                </constraints>
+                                <state key="normal" title="Accept">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kT-dd-sKI" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
+                                <rect key="frame" x="20" y="567" width="80" height="80"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.034578598420000002" blue="0.14930722769999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Du9-Yn-qXY"/>
+                                    <constraint firstAttribute="width" constant="80" id="rAy-5o-fm2"/>
+                                </constraints>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7kT-dd-sKI" firstAttribute="leading" secondItem="caM-mx-55f" secondAttribute="leading" constant="20" id="6j2-tO-j27"/>
+                            <constraint firstItem="sWv-FT-UqF" firstAttribute="top" secondItem="7kT-dd-sKI" secondAttribute="bottom" constant="20" id="LdC-pd-bg1"/>
+                            <constraint firstItem="sWv-FT-UqF" firstAttribute="top" secondItem="dTC-5E-Oe0" secondAttribute="bottom" constant="20" id="WrN-dA-xg8"/>
+                            <constraint firstAttribute="trailing" secondItem="dTC-5E-Oe0" secondAttribute="trailing" constant="20" id="dli-I6-4vy"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVL-zF-56O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151.5" y="1034.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aUT-F1-mBT">
