@@ -10,6 +10,8 @@ import UIKit
 
 class imagePreViewController: UIViewController {
 
+    var originalImage: UIImage?
+    
     @IBAction func cancelButton(sender: Buttons) {
     }
     

@@ -38,6 +38,9 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="86T-Mu-X0a" kind="show" id="imQ-GE-UnP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -64,10 +67,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JtW-pH-K3V">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <animations/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsr-aL-aAW" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
                                 <rect key="frame" x="20" y="567" width="80" height="80"/>
                                 <animations/>
@@ -91,6 +90,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="cancelButton:" destination="86T-Mu-X0a" eventType="touchUpInside" id="Asx-3h-fL6"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="zt0-sP-Yxc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1c5-Cc-1QC" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
@@ -118,6 +118,10 @@
                                     <action selector="okButton:" destination="86T-Mu-X0a" eventType="touchUpInside" id="Fas-fV-nKQ"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JtW-pH-K3V">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -313,4 +317,7 @@
             <point key="canvasLocation" x="424" y="1036"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zt0-sP-Yxc"/>
+    </inferredMetricsTieBreakers>
 </document>
