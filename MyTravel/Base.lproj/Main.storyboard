@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOI-do-I2h" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="157.5" y="599" width="60" height="60"/>
+                                <rect key="frame" x="158" y="599" width="60" height="60"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
