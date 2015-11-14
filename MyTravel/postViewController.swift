@@ -25,6 +25,8 @@ class postViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBAction func addLogButton(sender: Buttons) {
         
+        
+        
     }
     
     @IBAction func cancelButton(sender: Buttons) {
