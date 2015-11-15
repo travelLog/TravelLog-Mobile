@@ -23,8 +23,6 @@ class imagePreViewController: UIViewController {
     @IBAction func okButton(sender: Buttons) {
    
         
-        
-        
         let postVC = self.storyboard?.instantiateViewControllerWithIdentifier("postImageView") as? postViewController
         
         postVC?.originalImage = originalImage!
