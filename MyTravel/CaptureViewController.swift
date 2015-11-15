@@ -8,6 +8,8 @@
 
 import UIKit
 
+var originalImage = UIImage?() 
+
 class CaptureViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     //    @property (weak, nonatomic) IBOutlet UIView *cameraHolderView;
@@ -64,7 +66,6 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
-        
         let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         
         let imageVC = self.storyboard?.instantiateViewControllerWithIdentifier("imagePreviewer") as? imagePreViewController
@@ -74,6 +75,7 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
         self.navigationController?.pushViewController(imageVC!, animated: true)
         
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

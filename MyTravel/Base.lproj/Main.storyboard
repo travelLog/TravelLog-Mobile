@@ -10,7 +10,7 @@
         <!--Capture View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="imagePicker" id="BYZ-38-t0r" customClass="CaptureViewController" customModule="MyTravel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="imagePicker" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="CaptureViewController" customModule="MyTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
