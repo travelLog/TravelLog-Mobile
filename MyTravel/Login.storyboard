@@ -129,7 +129,7 @@
                                     <action selector="cancelButton:" destination="Yc7-9y-F8e" eventType="touchUpInside" id="Id6-W7-zXU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64W-71-lCQ">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64W-71-lCQ">
                                 <rect key="frame" x="16" y="575" width="343" height="39"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.90588235294117647" green="0.61176470588235299" blue="0.23137254901960785" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -144,12 +144,6 @@
                                     <action selector="pressedRegister:" destination="Yc7-9y-F8e" eventType="touchUpInside" id="qZP-qB-rAT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhW-0O-oVs">
-                                <rect key="frame" x="142" y="627" width="90" height="32"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="21"/>
-                                <state key="normal" title="Cancel"/>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -157,8 +151,6 @@
                             <constraint firstItem="N2J-cz-T0H" firstAttribute="top" secondItem="FNy-IH-dJP" secondAttribute="bottom" constant="17" id="16U-Uz-Jkr"/>
                             <constraint firstAttribute="trailing" secondItem="FNy-IH-dJP" secondAttribute="trailing" constant="101" id="1pZ-Lo-GxD"/>
                             <constraint firstAttribute="trailing" secondItem="B68-YK-O0a" secondAttribute="trailing" constant="101" id="8Er-u9-6vV"/>
-                            <constraint firstItem="64W-71-lCQ" firstAttribute="centerX" secondItem="WhW-0O-oVs" secondAttribute="centerX" id="C9D-Me-1BD"/>
-                            <constraint firstItem="BVH-kJ-WQj" firstAttribute="top" secondItem="WhW-0O-oVs" secondAttribute="bottom" constant="8" symbolic="YES" id="L0P-ho-VTM"/>
                             <constraint firstItem="VM5-my-g5J" firstAttribute="leading" secondItem="OIq-4V-LpQ" secondAttribute="leading" id="MN9-R9-Y5r"/>
                             <constraint firstAttribute="trailing" secondItem="N2J-cz-T0H" secondAttribute="trailing" constant="101" id="NNQ-jf-oFM"/>
                             <constraint firstItem="FNy-IH-dJP" firstAttribute="leading" secondItem="OIq-4V-LpQ" secondAttribute="leading" constant="109" id="PEk-zz-KqC"/>
@@ -171,7 +163,6 @@
                             <constraint firstItem="B68-YK-O0a" firstAttribute="leading" secondItem="OIq-4V-LpQ" secondAttribute="leading" constant="109" id="gea-yg-r4Z"/>
                             <constraint firstItem="FNy-IH-dJP" firstAttribute="top" secondItem="x5e-zF-1du" secondAttribute="bottom" constant="431" id="k6u-5Z-RDS"/>
                             <constraint firstItem="64W-71-lCQ" firstAttribute="centerX" secondItem="VM5-my-g5J" secondAttribute="centerX" id="tT0-KI-th7"/>
-                            <constraint firstItem="WhW-0O-oVs" firstAttribute="top" secondItem="64W-71-lCQ" secondAttribute="bottom" constant="8" symbolic="YES" id="yfT-G3-py7"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
