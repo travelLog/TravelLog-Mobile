@@ -11,17 +11,14 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-<<<<<<< HEAD
     
     @IBAction func cancelButton(sender: UIButton) {
         
-        self.dismissViewControllerAnimated(true, completion: nil)
-=======
+       
         self.navigationController?.popViewControllerAnimated(true)
         
         print("N")
     
->>>>>>> origin/master
     }
     
    
@@ -40,10 +37,6 @@ class LoginViewController: UIViewController {
         
         
         
-<<<<<<< HEAD
-        usernameRequest.loginWithUsername(username, andPassword: password)
-=======
-<<<<<<< HEAD
         usernameRequest.loginWithUsername(username, andPassword: password, completion: { loggedIn in
           
             if loggedIn {
@@ -65,24 +58,6 @@ class LoginViewController: UIViewController {
             }
         })
        
-=======
-        RailsRequest.session().loginWithUsername(username, andPassword: password)
->>>>>>> origin/master
-        
-        
-        let loginSB = UIStoryboard(name: "FlashCardStoryboard", bundle: nil)
-        
-        if let flashVC = loginSB.instantiateInitialViewController() {
-            
-            self.navigationController?.setViewControllers([flashVC], animated: true)
-<<<<<<< HEAD
-            
-            
-        }
-=======
-
->>>>>>> origin/master
-        
     }
     
    
@@ -94,7 +69,7 @@ class LoginViewController: UIViewController {
         guard let emailField = emailField.text where !emailField.isEmpty else { return }
         guard let password = passwordField.text where !password.isEmpty else { return }
     
-<<<<<<< HEAD
+
         usernameRequest.registerWithUsername(username, andPassword: password, email: emailField, completion: { registered in
             
             if registered {
@@ -115,38 +90,14 @@ class LoginViewController: UIViewController {
 
             
         } )
-=======
-        RailsRequest.session().registerWithUsername(username, andPassword: password, email: emailField)
->>>>>>> origin/master
+    
+    }
+    
         
+     override func viewDidLoad() {
+    
+        super.viewDidLoad()
         
-        func pressedRegister(sender: AnyObject) {
-            
-            let usernameRequest = RailsRequest.session()
-            
-            guard let username = usernameField.text where !username.isEmpty else { return }
-            guard let emailField = emailField.text where !emailField.isEmpty else { return }
-            guard let password = passwordField.text where !password.isEmpty else { return }
-            
-            usernameRequest.registerWithUsername(username, andPassword: password, email: emailField)
-            
-            
-            let loginSB = UIStoryboard(name: "FlashCardStoryboard", bundle: nil)
-            
-            if let flashVC = loginSB.instantiateInitialViewController() {
-                
-                self.navigationController?.setViewControllers([flashVC], animated: true)
-            }
-            
-            
-        }
-        
->>>>>>> origin/master
-        
-<<<<<<< HEAD
-        func viewDidLoad() {
-            super.viewDidLoad()
-=======
         let mainSB = UIStoryboard(name: "Main", bundle: nil)
         
         let LoginVC = mainSB.instantiateViewControllerWithIdentifier("imagePicker") as?
@@ -154,30 +105,6 @@ class LoginViewController: UIViewController {
         
         self.navigationController?.presentViewController(LoginVC!, animated: true, completion: nil)
 
-        
-        
-           }
-    
->>>>>>> origin/master
-            
-            
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
-        }
-        
-        func keyboardWillShow(sender: NSNotification) {
-            self.view.frame.origin.y -= 150
-        }
-        
-<<<<<<< HEAD
-        func keyboardWillHide(sender: NSNotification) {
-            self.view.frame.origin.y += 150
-        }
-    }
-    
-    
-}
-=======
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:
             UIKeyboardWillShowNotification, object: nil);
         
@@ -202,7 +129,6 @@ class LoginViewController: UIViewController {
         return true;
     }
     
-    }
+}
 
 
->>>>>>> origin/master
