@@ -52,29 +52,8 @@ func flipImage(image: UIImage) -> UIImage {
     
 }
 
-//func filterImage(originalImage: UIImage, filterName: String) -> UIImage {
-//    
-//    let context = CIContext(options: nil)
-//    
-//    NSLog("%@", context)
-//
-//    guard let cgImage = originalImage.CGImage else { return originalImage }
-//    
-//    let image = CIImage(CGImage: cgImage)
-//
-//    guard let filter = CIFilter(name: filterName) else { return originalImage }
-//
-//    guard filter.inputKeys.contains(kCIInputImageKey) else { return originalImage }
-//        
-//    filter.setValue(image, forKey: kCIInputImageKey)
-//
-//    guard let filteredImage = filter.valueForKey(kCIOutputImageKey) as? CIImage else {return originalImage }
-//    
-//    return UIImage(CIImage: filteredImage)
-//    
-//}
-//
-//
-//
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/master

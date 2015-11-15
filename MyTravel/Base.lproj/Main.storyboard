@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f77-13-01M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="14v-dh-6Ex">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E4g-B7-NPh" customClass="imagePicker" customModule="MyTravel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOI-do-I2h" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
                                 <rect key="frame" x="158" y="599" width="60" height="60"/>
                                 <animations/>
@@ -43,10 +47,6 @@
                                     <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nh2-lN-cmZ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E4g-B7-NPh" customClass="imagePicker" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <animations/>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -81,6 +81,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jt2-pH-K3V" customClass="imagePreView" customModule="MyTravel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JtW-pH-K3V">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
                             </imageView>
@@ -134,10 +138,6 @@
                                     <action selector="okButton:" destination="86T-Mu-X0a" eventType="touchUpInside" id="Fas-fV-nKQ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JtW-pH-K3V">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <animations/>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -159,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdG-Bc-3d2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1291.5" y="1035.5"/>
+            <point key="canvasLocation" x="1297.5" y="1034.5"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="1yE-vS-yHK">
@@ -226,41 +226,15 @@
                                     <action selector="postButton:" destination="14v-dh-6Ex" eventType="touchUpInside" id="TOw-cE-2kT"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmu-O8-DY1" customClass="logSelector" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="325" height="40"/>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tmu-O8-DY1">
+                                <rect key="frame" x="0.0" y="447" width="320" height="70"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="wc3-Bf-tee"/>
+                                    <constraint firstAttribute="height" constant="70" id="d8y-8i-Oup"/>
                                 </constraints>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3p-QO-bez" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="325" y="0.0" width="50" height="40"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="56I-Gn-MUZ"/>
-                                    <constraint firstAttribute="height" constant="40" id="F44-v6-ZJd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="1" green="0.034578598420000002" blue="0.14930722769999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="addLogButton:" destination="14v-dh-6Ex" eventType="touchUpInside" id="mgX-57-P20"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-rf-qIc" customClass="postImageView" customModule="MyTravel" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="42" width="375" height="472"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="440"/>
                                 <animations/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location Where You Are" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UtG-v7-tPH">
@@ -281,36 +255,56 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3p-QO-bez" customClass="Buttons" customModule="MyTravel" customModuleProvider="target">
+                                <rect key="frame" x="320" y="447" width="55" height="70"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.4549019608" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Sge-PA-QD0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.034578598420000002" blue="0.14930722769999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addLogButton:" destination="14v-dh-6Ex" eventType="touchUpInside" id="mgX-57-P20"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="w3p-QO-bez" secondAttribute="trailing" id="49O-xh-57J"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wMm-JW-7ED" secondAttribute="trailing" constant="-20" id="4Mr-pH-Tqf"/>
-                            <constraint firstItem="tmu-O8-DY1" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="7ZM-3f-Xup"/>
-                            <constraint firstAttribute="trailing" secondItem="p4g-rf-qIc" secondAttribute="trailing" id="Bna-28-LBs"/>
-                            <constraint firstItem="tmu-O8-DY1" firstAttribute="top" secondItem="00I-ug-Wad" secondAttribute="top" id="LfV-2T-KC5"/>
-                            <constraint firstItem="p4g-rf-qIc" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="Mqu-oM-NCs"/>
-                            <constraint firstItem="UtG-v7-tPH" firstAttribute="top" secondItem="p4g-rf-qIc" secondAttribute="bottom" constant="14" id="V6W-u5-BzE"/>
+                            <constraint firstItem="p4g-rf-qIc" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="7sP-DB-bLW"/>
+                            <constraint firstAttribute="trailing" secondItem="p4g-rf-qIc" secondAttribute="trailing" id="AQz-Es-4Zv"/>
+                            <constraint firstItem="p4g-rf-qIc" firstAttribute="top" secondItem="00I-ug-Wad" secondAttribute="top" id="FIh-gz-kM0"/>
+                            <constraint firstItem="w3p-QO-bez" firstAttribute="top" secondItem="p4g-rf-qIc" secondAttribute="bottom" constant="7" id="G8Z-hC-5KK"/>
+                            <constraint firstItem="w3p-QO-bez" firstAttribute="leading" secondItem="tmu-O8-DY1" secondAttribute="trailing" id="MHT-83-BQR"/>
+                            <constraint firstItem="UtG-v7-tPH" firstAttribute="top" secondItem="tmu-O8-DY1" secondAttribute="bottom" constant="11" id="NKp-ww-h32"/>
                             <constraint firstItem="rWR-J6-z3M" firstAttribute="top" secondItem="liV-5O-f2N" secondAttribute="bottom" constant="10" id="YPo-iO-jZy"/>
-                            <constraint firstItem="p4g-rf-qIc" firstAttribute="top" secondItem="w3p-QO-bez" secondAttribute="bottom" constant="2" id="aSB-c0-Bm3"/>
-                            <constraint firstItem="w3p-QO-bez" firstAttribute="leading" secondItem="tmu-O8-DY1" secondAttribute="trailing" id="dni-vH-WvT"/>
+                            <constraint firstItem="tmu-O8-DY1" firstAttribute="top" secondItem="p4g-rf-qIc" secondAttribute="bottom" constant="7" id="ZE1-Fh-s5E"/>
+                            <constraint firstItem="tmu-O8-DY1" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" id="aJS-Ew-E4Z"/>
                             <constraint firstItem="UtG-v7-tPH" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leadingMargin" constant="-20" id="eFq-ZW-i4h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UtG-v7-tPH" secondAttribute="trailing" constant="-20" id="ejN-sv-ED5"/>
                             <constraint firstItem="STX-tq-r3C" firstAttribute="top" secondItem="wMm-JW-7ED" secondAttribute="bottom" constant="19" id="gDq-NO-NQq"/>
-                            <constraint firstItem="w3p-QO-bez" firstAttribute="leading" secondItem="tmu-O8-DY1" secondAttribute="trailing" id="i8q-tj-T0c"/>
                             <constraint firstItem="liV-5O-f2N" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leading" constant="20" id="ohT-Yp-o3i"/>
                             <constraint firstItem="wMm-JW-7ED" firstAttribute="leading" secondItem="00I-ug-Wad" secondAttribute="leadingMargin" constant="-20" id="qoV-5j-o7o"/>
                             <constraint firstItem="wMm-JW-7ED" firstAttribute="top" secondItem="UtG-v7-tPH" secondAttribute="bottom" constant="10" id="qpF-vU-0AU"/>
-                            <constraint firstItem="w3p-QO-bez" firstAttribute="top" secondItem="00I-ug-Wad" secondAttribute="top" id="r6Q-VX-dQ8"/>
                             <constraint firstItem="rWR-J6-z3M" firstAttribute="top" secondItem="STX-tq-r3C" secondAttribute="bottom" constant="10" id="rbM-Ax-CBY"/>
                             <constraint firstAttribute="trailing" secondItem="STX-tq-r3C" secondAttribute="trailing" constant="20" id="rzQ-mH-pWf"/>
+                            <constraint firstAttribute="trailing" secondItem="w3p-QO-bez" secondAttribute="trailing" id="sh7-Ju-r1K"/>
+                            <constraint firstItem="UtG-v7-tPH" firstAttribute="top" secondItem="w3p-QO-bez" secondAttribute="bottom" constant="11" id="ttL-PI-2jp"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="dni-vH-WvT"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -327,7 +321,7 @@
         <!--Log Add View Controller-->
         <scene sceneID="7N5-23-YoG">
             <objects>
-                <viewController id="5NZ-sy-oHJ" customClass="logAddViewController" customModule="MyTravel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logAddVC" id="5NZ-sy-oHJ" customClass="logAddViewController" customModule="MyTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kBa-vH-21e"/>
                         <viewControllerLayoutGuide type="bottom" id="sWv-FT-UqF"/>

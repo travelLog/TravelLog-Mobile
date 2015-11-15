@@ -21,27 +21,39 @@ class postViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
    
     
     @IBOutlet weak var captionTF: UITextField!
+
     
     
     @IBAction func addLogButton(sender: Buttons) {
         
+        var logAddVC = storyboard?.instantiateViewControllerWithIdentifier("logAddVC") as! logAddViewController
         
+//        navigationController?.viewControllers = [logAddVC]
+        
+        presentViewController(logAddVC, animated: true, completion: nil)
+        
+    }
+    
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        return LogData.logSession().logsArray[row]
         
     }
     
     @IBAction func cancelButton(sender: Buttons) {
         
-        
-        
+        self.dismissViewControllerAnimated(true, completion: nil)
+
     }
     
     
     @IBAction func postButton(sender: Buttons) {
         
+        
     }
     
     func numberOfComponentsInPickerView(logPicker: UIPickerView) -> Int {
-        
         
         return 1
     }
@@ -49,14 +61,19 @@ class postViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     func pickerView(logPicker: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
         
-        return 2
+        return LogData.logSession().logsArray.count
     }
     
     var logData: [[String:AnyObject]] = []
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        logPicker.reloadAllComponents()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         logPicker.dataSource = self
         logPicker.delegate = self
@@ -67,6 +84,8 @@ class postViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         info.method = .GET
         
         RailsRequest.session().requestWithInfo(info) { (returnedInfo) -> () in
+            
+            print(returnedInfo)
             
             if let logs = returnedInfo?["logs"] as? [[String:AnyObject]] {
                 
