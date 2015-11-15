@@ -32,7 +32,15 @@ class LoginViewController: UIViewController {
         
         
         
-        usernameRequest.loginWithUsername(username, andPassword: password)
+        RailsRequest.session().loginWithUsername(username, andPassword: password)
+        
+        
+        let loginSB = UIStoryboard(name: "FlashCardStoryboard", bundle: nil)
+        
+        if let flashVC = loginSB.instantiateInitialViewController() {
+            
+            self.navigationController?.setViewControllers([flashVC], animated: true)
+
         
     }
     
@@ -45,7 +53,16 @@ class LoginViewController: UIViewController {
         guard let emailField = emailField.text where !emailField.isEmpty else { return }
         guard let password = passwordField.text where !password.isEmpty else { return }
     
-        usernameRequest.registerWithUsername(username, andPassword: password, email: emailField)
+        RailsRequest.session().registerWithUsername(username, andPassword: password, email: emailField)
+        
+        
+        let loginSB = UIStoryboard(name: "FlashCardStoryboard", bundle: nil)
+        
+        if let flashVC = loginSB.instantiateInitialViewController() {
+            
+            self.navigationController?.setViewControllers([flashVC], animated: true)
+
+        
         
     }
     
