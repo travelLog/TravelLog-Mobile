@@ -26,6 +26,7 @@ class postViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBAction func addLogButton(sender: Buttons) {
         
+
         let logAddVC = storyboard?.instantiateViewControllerWithIdentifier("logAddVC") as! logAddViewController
         
 //        navigationController?.viewControllers = [logAddVC]
@@ -71,8 +72,10 @@ class postViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         logPicker.reloadAllComponents()
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         
         logPicker.dataSource = self

@@ -35,7 +35,7 @@ class RailsRequest: NSObject {
 
       private let base = "https://mysterious-fjord-1759.herokuapp.com"
     
-    func loginWithUsername(username: String, andPassword password: String) {
+    func loginWithUsername(username: String, andPassword password: String, completion: (loggedIn: Bool) -> ()) {
         
         var info = RequestInfo()
         
@@ -58,16 +58,30 @@ class RailsRequest: NSObject {
                     self.token = key
                     
                     print(self.token)
+                    
+                    completion(loggedIn: true)
+                } else {
+                    
+                    completion(loggedIn: false)
+                    
                 }
+                
+                
+            }else {
+                
+                completion(loggedIn: false)
+                
             }
             
         }
         
     }
     
-    func registerWithUsername(username: String, andPassword password: String, email: String) {
-        var info = RequestInfo()
+    func registerWithUsername(username: String, andPassword password: String, email: String, completion: (registered: Bool) -> ()) {
         
+        
+        var info = RequestInfo()
+    
         info.endpoint = "/signup"
         info.method = .POST
         info.parameters = [
@@ -94,14 +108,29 @@ class RailsRequest: NSObject {
                     self.token = key
                     
                     print(self.token)
+                
+                    
+                    completion(registered: true)
+                } else {
+                    
+                    completion(registered: false)
+                    
                 }
+                
+                
+            }else {
+                
+                completion(registered: false)
+                
             }
-            
+
             
             
         }
         
     }
+    
+
 
     // info:AnyObhect may not be the info need to casr (info: ANyObject cast for
     func requestWithInfo(info: RequestInfo, completion: (returnedInfo: AnyObject?) -> ()) {
@@ -113,9 +142,10 @@ class RailsRequest: NSObject {
             if i == 0 { fullURLString += "?" } else { fullURLString += "&" }
             
             fullURLString += "\(k)=\(v)"
-            
+
         }
-        
+    
+
         guard let url = NSURL(string: fullURLString) else { return } // add run completion with fail
         
         let request = NSMutableURLRequest(URL: url)
@@ -169,15 +199,19 @@ class RailsRequest: NSObject {
                 
                 // have data
                 
-                if let returnedInfo = try? NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) {
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     
-                    completion(returnedInfo: returnedInfo)
+                    if let returnedInfo = try? NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) {
+                        
+                        completion(returnedInfo: returnedInfo)
+                        
+                    } else {
+                        
+                        completion(returnedInfo: nil)
+                        
+                    }
                     
-                } else {
-                    
-                    completion(returnedInfo: nil)
-                    
-                }
+                })
                 
             } else {
                 
@@ -187,6 +221,7 @@ class RailsRequest: NSObject {
         task.resume()
         
     }
+    
 }
 
 struct RequestInfo {

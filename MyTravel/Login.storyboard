@@ -9,7 +9,7 @@
         <!--Login View Controller-->
         <scene sceneID="1Ua-OX-Upe">
             <objects>
-                <viewController id="85i-8Y-MY2" customClass="LoginViewController" customModule="MyTravel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="85i-8Y-MY2" customClass="LoginViewController" customModule="MyTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dKU-Wc-Jyi"/>
                         <viewControllerLayoutGuide type="bottom" id="Dmy-nr-tV3"/>
@@ -82,7 +82,7 @@
         <!--Login View Controller-->
         <scene sceneID="S70-2o-VT0">
             <objects>
-                <viewController id="Yc7-9y-F8e" customClass="LoginViewController" customModule="MyTravel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegVC" id="Yc7-9y-F8e" customClass="LoginViewController" customModule="MyTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x5e-zF-1du"/>
                         <viewControllerLayoutGuide type="bottom" id="BVH-kJ-WQj"/>
@@ -172,7 +172,6 @@
                     <connections>
                         <outlet property="emailField" destination="N2J-cz-T0H" id="eNq-tg-TgE"/>
                         <outlet property="passwordField" destination="B68-YK-O0a" id="exw-Ow-TZr"/>
-                        <outlet property="pressedCancel" destination="WhW-0O-oVs" id="LgF-hq-5iD"/>
                         <outlet property="usernameField" destination="FNy-IH-dJP" id="uIR-Ch-qge"/>
                     </connections>
                 </viewController>
