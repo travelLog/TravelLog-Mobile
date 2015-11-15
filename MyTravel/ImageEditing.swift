@@ -52,5 +52,3 @@ func flipImage(image: UIImage) -> UIImage {
     
 }
 
-
-
