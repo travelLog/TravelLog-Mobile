@@ -11,13 +11,16 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+   
+    @IBAction func cancelButton(sender: UIButton) {
+    
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     @IBOutlet weak var usernameField: UITextField!
     
     @IBOutlet weak var emailField: UITextField!
-    
-    @IBOutlet weak var fullNameField: UITextField!
-    
+        
     @IBOutlet weak var passwordField: UITextField!
 
     @IBAction func pressedLogin(sender: AnyObject) {
@@ -39,11 +42,10 @@ class LoginViewController: UIViewController {
         let usernameRequest = RailsRequest.session()
         
         guard let username = usernameField.text where !username.isEmpty else { return }
-        guard let fullNameField = fullNameField.text where !fullNameField.isEmpty else { return }
         guard let emailField = emailField.text where !emailField.isEmpty else { return }
         guard let password = passwordField.text where !password.isEmpty else { return }
     
-        usernameRequest.registerWithUsername(username, andPassword: password, fullname: fullNameField, email: emailField)
+        usernameRequest.registerWithUsername(username, andPassword: password, email: emailField)
         
     }
     
@@ -51,6 +53,18 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+    }
+    
+    func keyboardWillShow(sender: NSNotification) {
+        self.view.frame.origin.y -= 150
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y += 150
+    }
     }
 
-}
+

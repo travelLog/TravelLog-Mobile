@@ -65,7 +65,7 @@ class RailsRequest: NSObject {
         
     }
     
-    func registerWithUsername(username: String, andPassword password: String, fullname: String, email: String) {
+    func registerWithUsername(username: String, andPassword password: String, email: String) {
         var info = RequestInfo()
         
         info.endpoint = "/signup"
@@ -74,7 +74,6 @@ class RailsRequest: NSObject {
             
             
             "username" : username,
-            "fullname" : fullname,
             "email" : email,
             "password" : password
             
