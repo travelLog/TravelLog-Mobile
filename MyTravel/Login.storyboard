@@ -121,9 +121,6 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <segue destination="85i-8Y-MY2" kind="show" id="rNO-Nr-H7m"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64W-71-lCQ">
                                 <rect key="frame" x="16" y="575" width="343" height="44"/>
@@ -204,7 +201,4 @@
     <resources>
         <image name="10.jpg" width="852" height="480"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="rNO-Nr-H7m"/>
-    </inferredMetricsTieBreakers>
 </document>
