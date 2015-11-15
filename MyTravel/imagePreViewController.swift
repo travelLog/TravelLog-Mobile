@@ -10,7 +10,7 @@ import UIKit
 
 class imagePreViewController: UIViewController {
     
-    var originalImage: UIImage?
+    var originalImage: UIImage!
     
     @IBOutlet weak var previewImageView: UIImageView!
     
@@ -22,6 +22,16 @@ class imagePreViewController: UIViewController {
     
     @IBAction func okButton(sender: Buttons) {
    
+        
+        
+        
+        let postVC = self.storyboard?.instantiateViewControllerWithIdentifier("postImageView") as? postViewController
+        
+        postVC?.originalImage = originalImage!
+        
+        self.navigationController?.pushViewController(postVC!, animated: true)
+
+    
     }
     
     

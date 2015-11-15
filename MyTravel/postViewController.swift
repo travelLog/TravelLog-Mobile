@@ -10,6 +10,7 @@ import UIKit
 
 class postViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    var originalImage: UIImage?
     
     @IBOutlet weak var logPicker: UIPickerView!
     

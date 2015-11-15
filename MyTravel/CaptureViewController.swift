@@ -69,7 +69,7 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
         
         let imageVC = self.storyboard?.instantiateViewControllerWithIdentifier("imagePreviewer") as? imagePreViewController
         
-        imageVC?.originalImage = flipImage(image!)
+        imageVC?.originalImage = image
         
         self.navigationController?.pushViewController(imageVC!, animated: true)
         
