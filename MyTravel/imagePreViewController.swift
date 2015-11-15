@@ -21,6 +21,7 @@ class imagePreViewController: UIViewController {
     
     
     @IBAction func okButton(sender: Buttons) {
+   
     }
     
     

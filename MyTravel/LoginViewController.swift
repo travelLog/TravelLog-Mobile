@@ -36,6 +36,7 @@ class LoginViewController: UIViewController {
         
         
         
+<<<<<<< HEAD
         usernameRequest.loginWithUsername(username, andPassword: password, completion: { loggedIn in
           
             if loggedIn {
@@ -57,6 +58,17 @@ class LoginViewController: UIViewController {
             }
         })
        
+=======
+        RailsRequest.session().loginWithUsername(username, andPassword: password)
+        
+        
+        let loginSB = UIStoryboard(name: "FlashCardStoryboard", bundle: nil)
+        
+        if let flashVC = loginSB.instantiateInitialViewController() {
+            
+            self.navigationController?.setViewControllers([flashVC], animated: true)
+
+>>>>>>> origin/master
         
     }
     
@@ -69,6 +81,7 @@ class LoginViewController: UIViewController {
         guard let emailField = emailField.text where !emailField.isEmpty else { return }
         guard let password = passwordField.text where !password.isEmpty else { return }
     
+<<<<<<< HEAD
         usernameRequest.registerWithUsername(username, andPassword: password, email: emailField, completion: { registered in
             
             if registered {
@@ -89,6 +102,18 @@ class LoginViewController: UIViewController {
 
             
         } )
+=======
+        RailsRequest.session().registerWithUsername(username, andPassword: password, email: emailField)
+        
+        
+        let loginSB = UIStoryboard(name: "FlashCardStoryboard", bundle: nil)
+        
+        if let flashVC = loginSB.instantiateInitialViewController() {
+            
+            self.navigationController?.setViewControllers([flashVC], animated: true)
+
+        
+>>>>>>> origin/master
         
         let mainSB = UIStoryboard(name: "Main", bundle: nil)
         

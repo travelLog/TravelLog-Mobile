@@ -116,6 +116,8 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="23"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64W-71-lCQ">
+                                <rect key="frame" x="16" y="575" width="343" height="44"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhW-0O-oVs">
                                 <rect key="frame" x="142" y="622" width="90" height="37"/>
                                 <animations/>
@@ -143,6 +145,12 @@
                                 <connections>
                                     <action selector="pressedRegister:" destination="Yc7-9y-F8e" eventType="touchUpInside" id="qZP-qB-rAT"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhW-0O-oVs">
+                                <rect key="frame" x="142" y="627" width="90" height="32"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Cancel"/>
                             </button>
                         </subviews>
                         <animations/>
