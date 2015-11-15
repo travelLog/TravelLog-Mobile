@@ -10,6 +10,10 @@ import UIKit
 
 class CaptureViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    //    @property (weak, nonatomic) IBOutlet UIView *cameraHolderView;
+    //
+    //    @property UIImagePickerController * picker;
+    
     @IBOutlet weak var cameraHolderView: UIView!
     
     var picker: UIImagePickerController = UIImagePickerController()
@@ -58,13 +62,14 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
         
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
-        let image = editingInfo?[UIImagePickerControllerOriginalImage] as? UIImage
         
-        let imageVC = self.storyboard?.instantiateViewControllerWithIdentifier("imagePreviewer") as? imagePreViewController
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         
-        imageVC?.originalImage = flipImage(image!)
+        let imageVC = self.storyboard?.instantiateViewControllerWithIdentifier("postImageView") as? postViewController
+        
+//        imageVC?.originalImage = flipImage(image!)
         
         self.navigationController?.pushViewController(imageVC!, animated: true)
         
@@ -73,19 +78,11 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-//    
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        
-//        if segue.identifier == "imagePost" {
-//            if let imagePreViewVC = segue.destinationViewController
-//            
-//        }
     
-        
-        
-    }
     
-//}
+    
+    
+}
 
 
 

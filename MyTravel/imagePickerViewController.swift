@@ -10,7 +10,7 @@ import UIKit
 
 class imagePickerViewController: UIViewController {
 
-    var originalImage: UIImage?
+//    var originalImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -32,7 +32,7 @@ class RailsRequest: NSObject {
     /// need methods and parameters for request, endpoint type and parameters
     
     
-    private let base = "https://rocky-garden-9800.herokuapp.com"
+    private let base = "https://mysterious-fjord-1759.herokuapp.com"
     
     func loginWithUsername(username: String, andPassword password: String) {
         
@@ -52,7 +52,7 @@ class RailsRequest: NSObject {
             
             if let user = returnedInfo?["user"] as? [String:AnyObject] {
                 
-                if let key = user["auth_token"] as? String {
+                if let key = user["access_token"] as? String {
                     
                     self.token = key
                     
@@ -73,7 +73,7 @@ class RailsRequest: NSObject {
             
             
             "username" : username,
-            "full_name" : fullname,
+            "fullname" : fullname,
             "email" : email,
             "password" : password
             
@@ -89,7 +89,7 @@ class RailsRequest: NSObject {
             
             if let user = returnedInfo?["user"] as? [String:AnyObject] {
                 
-                if let key = user["auth_token"] as? String {
+                if let key = user["access_token"] as? String {
                     
                     self.token = key
                     
@@ -102,7 +102,7 @@ class RailsRequest: NSObject {
         }
         
     }
-    
+
     // info:AnyObhect may not be the info need to casr (info: ANyObject cast for
     func requestWithInfo(info: RequestInfo, completion: (returnedInfo: AnyObject?) -> ()) {
         

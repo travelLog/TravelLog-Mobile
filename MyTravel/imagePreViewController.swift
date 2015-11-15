@@ -27,8 +27,9 @@ class imagePreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        previewImageView.image = originalImage!
+     
+        print("This is the image \(originalImage)")
     }
 
     override func didReceiveMemoryWarning() {
