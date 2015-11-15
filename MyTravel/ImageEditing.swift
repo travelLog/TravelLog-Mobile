@@ -52,8 +52,3 @@ func flipImage(image: UIImage) -> UIImage {
     
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/master

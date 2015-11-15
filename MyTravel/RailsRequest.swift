@@ -32,11 +32,8 @@ class RailsRequest: NSObject {
     /// need methods and parameters for request, endpoint type and parameters
     
     
-<<<<<<< HEAD
-    private let base = "https://mysterious-fjord-1759.herokuapp.com/signup"
-=======
-    private let base = "https://mysterious-fjord-1759.herokuapp.com"
->>>>>>> origin/master
+
+      private let base = "https://mysterious-fjord-1759.herokuapp.com"
     
     func loginWithUsername(username: String, andPassword password: String) {
         

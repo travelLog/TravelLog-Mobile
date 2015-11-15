@@ -78,16 +78,9 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-<<<<<<< HEAD
-        
-    }
-=======
-    
->>>>>>> origin/master
-    
-    
-    
 }
+
+
 
 
 
