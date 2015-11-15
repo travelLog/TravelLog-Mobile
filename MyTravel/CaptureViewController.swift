@@ -67,9 +67,9 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
         
         let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         
-        let imageVC = self.storyboard?.instantiateViewControllerWithIdentifier("postImageView") as? postViewController
+        let imageVC = self.storyboard?.instantiateViewControllerWithIdentifier("imagePreviewer") as? imagePreViewController
         
-//        imageVC?.originalImage = flipImage(image!)
+        imageVC?.originalImage = flipImage(image!)
         
         self.navigationController?.pushViewController(imageVC!, animated: true)
         

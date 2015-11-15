@@ -26,7 +26,7 @@ class postViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBAction func addLogButton(sender: Buttons) {
         
-        var logAddVC = storyboard?.instantiateViewControllerWithIdentifier("logAddVC") as! logAddViewController
+        let logAddVC = storyboard?.instantiateViewControllerWithIdentifier("logAddVC") as! logAddViewController
         
 //        navigationController?.viewControllers = [logAddVC]
         
