@@ -61,7 +61,7 @@ class CaptureViewController: UIViewController, UINavigationControllerDelegate, U
     @IBAction func takePicture(sender: AnyObject) {
         
         self.picker.takePicture()
-        
+        print("takepic")
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {

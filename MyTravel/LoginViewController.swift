@@ -95,16 +95,8 @@ class LoginViewController: UIViewController {
     
         
      override func viewDidLoad() {
-    
         super.viewDidLoad()
         
-        let mainSB = UIStoryboard(name: "Main", bundle: nil)
-        
-        let LoginVC = mainSB.instantiateViewControllerWithIdentifier("imagePicker") as?
-        CaptureViewController
-        
-        self.navigationController?.presentViewController(LoginVC!, animated: true, completion: nil)
-
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:
             UIKeyboardWillShowNotification, object: nil);
         
